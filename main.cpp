@@ -21,6 +21,8 @@
   // https://github.com/adafruit/Adafruit-GFX-Library
   // Library Adafruit_SSD1306.h
 
+ #define I2C_SEGMENT_DISP0 7
+ #define DHT_READ_TIME 1000
 #include "SevSeg.h"
 SevSeg sevseg;
  byte numDigits = 4;
@@ -32,14 +34,7 @@ SevSeg sevseg;
   byte hardwareConfig = COMMON_CATHODE;
   sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
   sevseg.setBrightness(90);
- //   for DHT11,
- //   VCC: 5V or 3V
- //   GND: GND
- //   DATA: 2
- int pinDHT11 = 3;
- SimpleDHT11 dht11(pinDHT11);
- #define I2C_SEGMENT_DISP0 7
- #define DHT_READ_TIME 1000
+
 
 
  //   for DHT11,   
@@ -48,10 +43,7 @@ SevSeg sevseg;
  //   DATA: 2  
  int pinDHT11 = 3;  
  SimpleDHT11 dht11(pinDHT11);  
- #define screen_width 128 // OLED display width, in pixels  
- #define screen_height 64 // OLED display height, in pixels  
- #define OLED_RESET -1
- Adafruit_SSD1306 display(screen_width, screen_height);  
+
  void setup ()  
  {  
      Serial.begin(9600);
