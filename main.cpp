@@ -1,29 +1,14 @@
- // TECHATRONIC.COM   
-  // SimpleDHT LIBRARY LINK   
-  // https://github.com/winlinvip/SimpleDHT   
-  // Library SPI.h  
-  // https://github.com/PaulStoffregen/SPI   
-  // Library Adafruit_GFX.h  
-  // https://github.com/adafruit/Adafruit-GFX-Library  
-  // Library Adafruit_SSD1306.h  
-  // https://github.com/adafruit/Adafruit_SSD1306  
+ 
  #include <SPI.h>  
  #include <Wire.h>  
  #include <Adafruit_GFX.h>  
  #include <Adafruit_SSD1306.h>  
  #include <SimpleDHT.h>  
-// TECHATRONIC.COM
-  // SimpleDHT LIBRARY LINK
-  // https://github.com/winlinvip/SimpleDHT
-  // Library SPI.h
-  // https://github.com/PaulStoffregen/SPI
-  // Library Adafruit_GFX.h
-  // https://github.com/adafruit/Adafruit-GFX-Library
-  // Library Adafruit_SSD1306.h
+#include "SevSeg.h"
+// using React app to d
 
  #define I2C_SEGMENT_DISP0 7
  #define DHT_READ_TIME 1000
-#include "SevSeg.h"
 SevSeg sevseg;
  byte numDigits = 4;
   byte digitPins[] = {10, 11, 12, 13};
